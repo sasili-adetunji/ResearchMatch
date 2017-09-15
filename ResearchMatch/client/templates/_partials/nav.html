@@ -16,6 +16,15 @@
             <li><a href="{{pathFor 'aboutIndex'}}"> About</a></li>
             <li><a href="{{pathFor 'contactIndex'}}"> Contact</a></li>
           </ul>
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+            {{ #if isInRole 'Administrator' }}
+            <a href="#"> Admin </a>
+            {{/if}}
+          </li>
+			{{> loginButtons}} <!-- here -->
+		</ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
